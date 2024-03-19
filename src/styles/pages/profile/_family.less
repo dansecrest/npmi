@@ -1,0 +1,91 @@
+.family-info {
+  margin: 0 1.5rem 1rem;
+}
+
+.family-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.family-member {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 1.5rem;
+  color: var(--color-black);
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:focus {
+    color: inherit;
+    outline-offset: 1px;
+  }
+
+  .circle {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+    background-color: var(--color-gray-200);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .placeholder {
+    color: var(--color-gray-300);
+    .font-size(24);
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  li {
+    padding-right: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:first-child {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}
+
+@media screen and (min-width: @medium-profile) and (max-width: (@xlarge-profile - 1)) {
+  .family-member {
+    width: 33%;
+
+    .circle {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}
+
+@media screen and (min-width: @xlarge-profile) {
+  .family-member {
+    width: 25%;
+    margin-bottom: 2rem;
+
+    .circle {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}

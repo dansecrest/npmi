@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./includes/site-head.html')
+
+<body class="profile-site">
+@@include('./includes/site-header.html', { "title": "My Profile" })
+
+  <main>
+    <div class="profile-container">
+      <section class="profile-main">
+        @@include('./includes/profile-info.html')
+      </section>
+
+      <div class="profile-sections">
+        <div class="section-heading open">
+          <i class="icon fa fa-family"></i>
+          <span>Family</span>
+          <i class="arrow fa fa-angle-down"></i>
+        </div>
+
+        <section class="family-info">
+          <div class="family-content">
+            <a href="#" class="family-member">
+              <div class="circle">
+                <img src="images/profile/homer.png">
+                <i class="placeholder fa fa-user"></i>
+              </div>
+              <ul>
+                <li>Homer</li>
+                <li>40</li>
+              </ul>
+            </a>
+
+            <a href="#" class="family-member">
+              <div class="circle">
+                <img src="images/profile/bart.png">
+                <i class="placeholder fa fa-user"></i>
+              </div>
+              <ul>
+                <li>Bart</li>
+                <li>10</li>
+              </ul>
+            </a>
+
+            <a href="#" class="family-member">
+              <div class="circle">
+                <img src="images/profile/lisa.png">
+                <i class="placeholder fa fa-user"></i>
+              </div>
+              <ul>
+                <li>Lisa</li>
+                <li>8</li>
+              </ul>
+            </a>
+
+            <a href="#" class="family-member">
+              <div class="circle">
+                <img src="images/profile/maggie.png">
+                <i class="placeholder fa fa-user"></i>
+              </div>
+              <ul>
+                <li>Maggie</li>
+                <li>1</li>
+              </ul>
+            </a>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <i class="icon fa fa-circle-dollar"></i>
+          <span>Giving</span>
+          <i class="arrow fa fa-angle-down"></i>
+        </div>
+
+        <section class="giving-info">
+          <div class="giving-content">
+            <div class="giving-year">
+              <h3>2023</h3>
+              <ul>
+                <li>General- North Point <span>$4,000.00</span></li>
+                <li>Intersect Initiative - NP <span>$200.00</span></li>
+                <li>Total <span>$4,200.00</span></li>
+              </ul>
+            </div>
+
+            <div class="giving-year">
+              <h3>2022</h3>
+              <ul>
+                <li>Be Rich Initiative - NPCC <span>$1,000.00</span></li>
+                <li>General- North Point <span>$6,000.00</span></li>
+                <li>Intersect Initiative - NP <span>$100.00</span></li>
+                <li>Total <span>$7,100.00</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="giving-statements">
+            <h3>Statements</h3>
+            <div>
+              <a href="#">2023 YTD</a>
+              <span>|</span>
+              <a href="#">2022</a>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-heading">
+          <i class="icon fa fa-heart"></i>
+          <span>Serving</span>
+          <i class="arrow fa fa-angle-down"></i>
+        </div>
+
+        <section class="serving-info">
+          <div class="serving-content">
+            <div class="group">
+              <h3>InsideOut</h3>
+              <ul>
+                <li>Adult Leader</li>
+                <li>Active</li>
+              </ul>
+            </div>
+
+            <div class="group">
+              <h3>Guest Services</h3>
+              <ul>
+                <li>Adult Volunteer</li>
+                <li>Active</li>
+              </ul>
+            </div>
+
+            <div class="group inactive">
+              <h3>Transit</h3>
+              <ul>
+                <li>Adult Leader</li>
+                <li>Inactive</li>
+              </ul>
+            </div>
+
+            <div class="group inactive">
+              <h3>UpStreet</h3>
+              <ul>
+                <li>Adult Leader</li>
+                <li>Inactive</li>
+              </ul>
+            </div>
+          </div>
+
+          <!--
+          <div class="serving-content">
+            <p>You do not have any active serving roles.</p>
+          </div>
+          -->
+        </section>
+
+        <div class="section-heading">
+          <i class="icon fa fa-users"></i>
+          <span>Groups</span>
+          <i class="arrow fa fa-angle-down"></i>
+        </div>
+
+        <section class="groups-info">
+          <div class="groups-content">
+            <div class="group">
+              <h3>Women's Group</h3>
+              <ul>
+                <li>Member / 12 Members</li>
+                <li>Started 8/20/2022</li>
+              </ul>
+            </div>
+
+            <div class="group">
+              <h3>Thrive</h3>
+              <ul>
+                <li>Member / 8 Members</li>
+                <li>Started 7/31/2022</li>
+              </ul>
+            </div>
+
+            <div class="group inactive">
+              <h3>Women's Group</h3>
+              <ul>
+                <li>Member / 10 Members</li>
+                <li>Ended 5/19/2022</li>
+              </ul>
+            </div>
+
+            <div class="group inactive">
+              <h3>Starting Point</h3>
+              <ul>
+                <li>Member / 12 Members</li>
+                <li>Ended 12/5/2014</li>
+              </ul>
+            </div>
+          </div>
+
+          <!--
+          <div class="groups-content">
+            <p>You are not active in any groups.</p>
+          </div>
+          -->
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.section-heading').forEach(item => {
+      item.addEventListener('click', event => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+@@include('./includes/site-footer.html')
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "npm-rock-theme",
+  "version": "1.0.0",
+  "description": "A minimal local dev environment for Rock theme authoring.",
+  "main": "index.html",
+  "author": "North Point Ministries",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.28.3",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-less": "^5.0.0"
+  }
+}

@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus,
+a:focus {
+  outline-color: var(--color-primary);
+  outline-offset: 3px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-body);
+  line-height: 1.2;
+  background-color: var(--color-background);
+}
+
+main {
+  position: relative;
+  width: 88%;
+  max-width: @large-container;
+  margin: 0 auto;
+  padding-top: 1rem;
+
+  body.login & {
+    max-width: @medium-container;
+  }
+
+  body.profile-site & {
+    max-width: @xlarge-container;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0;
+  color: var(--color-text-headline);
+  line-height: 1.2;
+}
+
+h1,
+h2 {
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1 {
+  .font-size(26);
+}
+
+h2 {
+  .font-size(24);
+}
+
+h3 {
+  .font-size(22);
+}
+
+h4 {
+  .font-size(20);
+}
+
+h5 {
+  .font-size(18);
+}
+
+h6 {
+  .font-size(16);
+}
+
+@media screen and (min-width: @medium) {
+  h1 {
+    .font-size(36);
+  }
+
+  h2 {
+    .font-size(30);
+  }
+
+  h3 {
+    .font-size(28);
+  }
+
+  h4 {
+    .font-size(24);
+  }
+
+  h5 {
+    .font-size(20);
+  }
+
+  h6 {
+    .font-size(16);
+  }
+}
+
+hr {
+  height: 1px;
+  margin: 3rem 0;
+  background-color: var(--color-divider);
+  border: none;
+}
+
+p {
+  margin: 0 0 2rem;
+  line-height: 1.5;
+}
+
+ul {
+  margin: 1rem 0 3rem;
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin: 1rem 0;
+    padding-left: 1.2rem;
+    .font-size(14);
+  }
+}
+
+a,
+a:hover,
+a:focus {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  p &,
+  ul & {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.button {
+  .button();
+
+  &.secondary {
+    color: var(--color-gray-600);
+    background-color: var(--color-gray-200);
+  }
+
+  &.outlined {
+    .button-outlined();
+  }
+
+  i {
+    position: relative;
+    top: 1px;
+    left: -4px;
+    margin-right: 0.25rem;
+    .font-size(20);
+  }
+}
+
+.btn-link {
+  background-color: transparent;
+  .font-size(14);
+
+  &:focus {
+    text-decoration: none;
+    outline-color: var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+.btn-login {
+  text-align: right;
+
+  .button {
+    margin: 0;
+  }
+}

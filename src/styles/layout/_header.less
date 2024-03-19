@@ -1,0 +1,111 @@
+.header {
+  position: relative;
+  z-index: 99;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  margin: 0 1rem;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-divider);
+  .font-size(14);
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      border-left: 1px solid var(--color-divider);
+    }
+  }
+
+  .church-icon {
+    height: 3rem;
+  }
+
+  .church-logo {
+    display: none;
+    height: 4rem;
+  }
+
+  .greeting {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    padding: 0.5rem;
+
+    &:hover .menu {
+      display: block;
+    }
+
+    p {
+      margin: 0;
+      padding-right: 0.5rem;
+      text-align: right;
+      line-height: 1.2;
+      cursor: pointer;
+    }
+
+    strong {
+      color: var(--color-primary);
+    }
+
+    i {
+      position: relative;
+      top: 1px;
+      color: var(--color-primary);
+      cursor: pointer;
+    }
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 10rem;
+    padding: 0.5rem 1.5rem;
+    text-align: right;
+    background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
+    border-bottom: 1px solid var(--color-divider);
+    .font-size(14);
+
+    a {
+      display: block;
+      margin: 1rem 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @medium) {
+  .site-header {
+    height: 6rem;
+    padding: 0 1rem;
+    .font-size(16);
+
+    .logo span {
+      margin-left: 1.5rem;
+      padding: 1rem 1.5rem;
+      .font-size(18);
+    }
+
+    .church-icon {
+      display: none;
+    }
+
+    .church-logo {
+      display: block;
+    }
+  }
+}

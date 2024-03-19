@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./includes/site-head.html')
+
+<body class="applications-site">
+@@include('./includes/site-header.html', { "title": "Applications" })
+
+  <main>
+    <h1>Choose A Path</h1>
+
+    <div class="path-options">
+      <a href="path-volunteer.html" class="path">
+        <img src="images/volunteer.jpg" alt="Volunteer">
+        <span>I want to volunteer.</span>
+      </a>
+      <a href="path-care.html" class="path">
+        <img src="images/care.jpg" alt="Care">
+        <span>I need care or mentoring.</span>
+      </a>
+      <a href="path-baptism.html" class="path">
+        <img src="images/baptism.jpg" alt="Baptism">
+        <span>I want to be baptized.</span>
+      </a>
+    </div>
+
+    <hr>
+
+    <div class="actions">
+      <a href="my-applications.html" class="button outlined">My Applications</a>
+      <a href="choose-church.html" class="button outlined">Change Church</a>
+    </div>
+  </main>
+
+@@include('./includes/site-footer.html')
+</body>
+</html>

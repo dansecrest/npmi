@@ -1,0 +1,159 @@
+.application-nav {
+  img,
+  .nav-select {
+    display: none;
+  }
+
+  .item {
+    display: flex;
+    padding: 1rem;
+    color: var(--color-gray-300);
+    border-bottom: 1px solid var(--color-divider);
+
+    &.completed,
+    &.selected {
+      color: var(--color-black);
+    }
+
+    &.selected {
+      font-weight: var(--font-weight-bold);
+    }
+
+    span {
+      flex-shrink: 0;
+      width: 2rem;
+    }
+
+    i {
+      align-self: center;
+      margin-left: auto;
+    }
+  }
+}
+
+.application-form {
+  .validation-error {
+    float: none;
+    position: relative;
+    top: -12px;
+    font-size: 1rem;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-error);
+  }
+
+  .actions {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-top: 3rem;
+
+    a:first-child {
+      .button-outlined();
+    }
+  }
+
+  .btn-default {
+    color: var(--color-gray-600);
+    background-color: var(--color-gray-200);
+
+    &:hover,
+    &:focus {
+      color: var(--color-gray-600);
+    }
+  }
+}
+
+@media screen and (max-width: @large) {
+  .application-nav {
+    position: sticky;
+    z-index: 98;
+    top: 4rem;
+    left: 0;
+    background-color: var(--color-gray-100);
+
+    .nav-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border-bottom: 1px solid var(--color-divider);
+      cursor: pointer;
+
+      i {
+        .font-size(24);
+      }
+    }
+
+    .nav-items {
+      display: none;
+      padding: 0 1rem 3rem;
+      border-bottom: 1px solid var(--color-divider);
+    }
+  }
+
+  nav.open {
+    .nav-select i {
+      transform: rotate(180deg);
+    }
+
+    .nav-items {
+      display: block;
+    }
+  }
+
+  .application-form {
+    h2 {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: @medium) and (max-width: @large) {
+  .application-nav {
+    top: 6rem;
+  }
+}
+
+@media screen and (min-width: @large) {
+  .application-content {
+    display: grid;
+    grid-template-columns: 275px 1fr;
+    column-gap: 5%;
+    min-height: 800px;
+  }
+
+  .application-nav {
+    nav {
+      position: fixed;
+      width: 275px;
+      margin-top: 2.5rem;
+    }
+
+    img {
+      display: block;
+      max-width: 10rem;
+      max-height: 10rem;
+      margin: 0 0 2.5rem 3rem;
+    }
+
+    .nav-items {
+      border-top: 1px solid var(--color-divider);
+    }
+  }
+
+  .application-form {
+    .actions {
+      a:first-child {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-device-height: @large) {
+  .application-nav {
+    nav {
+      position: static;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.site-footer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 6rem 1rem 0;
+  padding: 1.5rem 0;
+  color: var(--color-gray-300);
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-divider);
+  .font-size(12);
+
+  a {
+    color: var(--color-gray-300);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    margin: 0 0.3rem;
+  }
+}
+
+@media screen and (min-width: @medium) {
+  .site-footer {
+    .font-size(14);
+  }
+}

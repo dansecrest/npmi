@@ -1,0 +1,91 @@
+/*
+------------------------------
+Login header
+------------------------------
+*/
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  background-color: var(--color-brand);
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    width: 3.75rem;
+    margin: 0.5rem;
+  }
+
+  @media screen and (min-width: @medium) {
+    padding: 3rem 0 1rem;
+
+    img {
+      width: 4.5rem;
+    }
+  }
+
+  @media screen and (min-width: @large) {
+    padding: 6rem 1rem 2rem;
+
+    .logos {
+      width: 100%;
+      max-width: 980px;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 6rem;
+    }
+  }
+}
+
+
+/*
+------------------------------
+Login support pages
+------------------------------
+*/
+
+body.login {
+  accent-color: var(--color-brand);
+
+  a:focus {
+    outline-color: var(--color-brand);
+  }
+
+  h1 {
+    margin: 5rem 0 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
+  }
+
+  .btn:focus {
+    outline-color: var(--color-brand);
+  }
+
+  .btn-primary {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+  }
+
+  .btn-action {
+    background-color: var(--color-gray-600);
+    border-color: var(--color-gray-600);
+  }
+
+  .btn-link {
+    margin-bottom: 0.8rem;
+    color: var(--color-brand);
+
+    &:focus {
+      outline-color: var(--color-brand);
+    }
+  }
+}

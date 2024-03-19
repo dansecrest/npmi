@@ -1,0 +1,56 @@
+.area-heading {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 1.5rem;
+
+  img {
+    width: 7rem;
+    margin-right: 1.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+  }
+
+  & + p {
+    margin: 0 1rem;
+  }
+}
+
+.applications {
+  margin-top: -2rem;
+
+  .option h4 {
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+    .font-size(18);
+
+    img {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: @medium) {
+  .area-heading {
+    margin: 3rem 0 2rem;
+
+    img {
+      width: 10rem;
+      margin-right: 2rem;
+    }
+
+    & + p {
+      margin: 0 1.5rem;
+    }
+  }
+
+  .applications {
+    .option h4 {
+      .font-size(20);
+    }
+  }
+}

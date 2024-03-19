@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./includes/site-head.html')
+
+<body class="applications-site">
+@@include('./includes/site-header.html', { "title": "Applications" })
+
+  <main>
+    <div class="application-content">
+      <div class="application-nav">
+        <nav id="applicationNav">
+          <img src="images/ministry-logos/waumba-land.svg" alt="Waumba Land">
+
+          <div id="navSelect" class="nav-select">
+            <span><strong>Step 2 of 8</strong> - General Information</span>
+            <i class="fa fa-angle-down"></i>
+          </div>
+
+          <div class="nav-items">
+            <a href="#" class="item completed">
+              <span>1.</span> Overview
+              <i class="fa fa-check-circle"></i>
+            </a>
+            <div class="item selected">
+              <span>2.</span> General Information
+            </div>
+            <div class="item">
+              <span>3.</span> Spiritual Background
+            </div>
+            <div class="item">
+              <span>4.</span> Strengths & Experience
+            </div>
+            <div class="item">
+              <span>5.</span> Involvement
+            </div>
+            <div class="item">
+              <span>6.</span> Media Release
+            </div>
+            <div class="item">
+              <span>7.</span> Background Information
+            </div>
+            <div class="item">
+              <span>8.</span> References
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="application-form">
+        <h2>Waumba Land Volunteer</h2>
+        <h3>General Information</h3>
+
+        <form>
+          <label>First Name *</label>
+          <input type="text" class="form-control">
+
+          <label>Middle Name</label>
+          <input type="text" class="form-control">
+
+          <label>Last Name *</label>
+          <input type="text" class="form-control">
+
+          <label>Phone *</label>
+          <input type="text" class="form-control">
+
+          <label>Email *</label>
+          <input type="text" class="form-control">
+
+          <label>Street Address 1 *</label>
+          <input type="text" class="form-control">
+
+          <label>Street Address 2 *</label>
+          <input type="text" class="form-control">
+
+          <label>City *</label>
+          <input type="text" class="form-control">
+
+          <label>State *</label>
+          <input type="text" class="form-control">
+
+          <label>Zip *</label>
+          <input type="text" class="form-control">
+
+          <label>If you have children not currently living in your home, please list their names and ages.</label>
+          <textarea class="form-control"></textarea>
+
+          <div class="actions">
+            <a href="my-applications.html" class="btn btn-default">Save and Finish Later</a>
+            <a href="#" class="btn btn-default">Previous</a>
+            <a href="#" class="btn btn-primary">Next</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const applicationNav = document.getElementById('applicationNav');
+    const navSelect = document.getElementById('navSelect');
+
+    navSelect.addEventListener('click', () => {
+      applicationNav.classList.toggle('open');
+    });
+  </script>
+
+@@include('./includes/site-footer.html')
+</body>
+</html>

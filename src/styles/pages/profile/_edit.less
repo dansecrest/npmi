@@ -1,0 +1,88 @@
+.edit-info {
+  position: relative;
+  width: 100%;
+
+  h1 {
+    margin: 0 0 1.2rem;
+    padding-top: 1.2rem;
+    .font-size(32);
+  }
+
+  h2 {
+    margin: 0 0 0 2rem;
+    .font-size(24);
+  }
+
+  h3 {
+    margin: 0 0 2rem;
+    font-weight: var(--font-weight-bold);
+    .font-size(16);
+
+    span {
+      float: right;
+      .font-size(14);
+    }
+  }
+
+  .icon-close {
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+    padding: 0 0.5rem;
+    color: var(--color-icon);
+    .font-size(36);
+  }
+
+  .info-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  fieldset {
+    margin: 0 0 1.2rem;
+    padding: 0;
+    border: none;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 2rem;
+
+    .button {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: @large-profile) {
+  .edit-info {
+    h1 {
+      position: fixed;
+    }
+
+    h2 {
+      margin: 1.5rem 0 0 0;
+    }
+
+    .profile-container {
+      padding-top: 6rem;
+    }
+
+    .info-card {
+      position: fixed;
+      flex-direction: column;
+    }
+
+    fieldset {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1.5rem;
+    }
+
+    .actions {
+      justify-content: flex-end;
+    }
+  }
+}
