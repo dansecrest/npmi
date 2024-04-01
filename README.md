@@ -2,6 +2,8 @@
 
 A minimal local dev environment for Rock theme authoring.
 
+https://dansecrest.github.io/npmi/
+
 ## Setup
 
 - Install Node.js
