@@ -44,22 +44,29 @@
 
     .arrow {
       color: var(--color-icon);
+      transition: rotate 0.3s ease;
       .font-size(24);
     }
 
     & + section {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out;
     }
 
     &.open {
       + section {
-        display: block;
+        max-height: 500px;
       }
 
       .arrow {
         rotate: 180deg;
       }
     }
+  }
+
+  section {
+    margin: 0 1.5rem;
   }
 
   .button {
